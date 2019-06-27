@@ -10,14 +10,14 @@ def download_file(url, dst_path):
         with open(dst_path, mode='wb') as local_file:
             local_file.write(data)
 
-f = open('img/url.txt', 'r')
+f = open('url-list.txt', 'r')
 line = f.readline()
 num = 0
 
 while line:
     num = num + 1
     url = line.strip()
-    dst_path = str(num) + '.png'
+    dst_path = "img/" + str(num) + '.png'
     download_file(url, dst_path)
     line = f.readline()
 f.close()
