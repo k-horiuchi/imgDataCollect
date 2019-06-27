@@ -1,6 +1,7 @@
 import os
 import pprint
 import time
+from time import sleep
 import urllib.error
 import urllib.request
 
@@ -20,4 +21,5 @@ while line:
     dst_path = "img/" + str(num) + '.png'
     download_file(url, dst_path)
     line = f.readline()
+    sleep(1)
 f.close()
